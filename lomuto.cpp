@@ -7,6 +7,8 @@
 #include <random>
 #include <algorithm>
 
+#include "pdqsort.h"
+
 using std::swap;
 
 using TYPE = long;
@@ -219,6 +221,8 @@ int main(int argc, char** argv) {
         clock_gettime(CLOCK_PROCESS_CPUTIME_ID, &start);
 #if defined(STDSORT)
         std::sort(&v.front(), 1 + &v.back());
+#elif defined(PDQSORT)
+        pdqsort_branchless(&v.front(), 1 + &v.back());
 #else
         sort(&v.front(), 1 + &v.back());
 #endif

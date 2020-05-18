@@ -32,6 +32,8 @@ For gcc:
     g++ -std=c++17 -O3 -DNDEBUG -DLOMUTO_BRANCHY lomuto.cpp
     # Use Lomuto partition, branch-free implementation
     g++ -std=c++17 -O3 -DNDEBUG -DLOMUTO lomuto.cpp
+    # Use pdqsort
+    g++ -std=c++17 -O3 -DNDEBUG -DPDQSORT lomuto.cpp
 
 For clang:
 
@@ -43,5 +45,7 @@ For clang:
     clang++ -std=c++17 -O3 -DNDEBUG -DLOMUTO_BRANCHY lomuto.cpp
     # Use Lomuto partition, branch-free implementation
     clang++ -std=c++17 -O3 -DNDEBUG -DLOMUTO lomuto.cpp
+    # Use pdqsort
+    clang++ -std=c++17 -O3 -DNDEBUG -DPDQSORT lomuto.cpp
 
 Run the produced binary with one numeric argument, the number of items to sort. Beware: all compilers write to `./a.out` except for ldc, which writes to `./lomuto`.
